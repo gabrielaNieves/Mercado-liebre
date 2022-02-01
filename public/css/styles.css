@@ -116,6 +116,15 @@ h3,
     margin-left: 80px;
     padding-bottom: 10px;
 }
+.description{
+    display: none;
+    margin-top: 20px;
+    transition: 0.25 ease-out;
+}
+.main-article:hover .description{
+    display: block;
+}
+
 
 section.banner img{
     width: 100%;
@@ -273,5 +282,9 @@ footer h5{
     }
     header div.top-header .cuotas{
         width: 33%;
+    }
+    .description{
+        margin: 5px 0;
+        margin-left: 12px;
     }
 }
