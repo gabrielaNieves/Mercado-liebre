@@ -73,11 +73,8 @@ header form button{
     margin-left: 5px;
     background-color: #EAC926;
 }
-
-header div.top-header p{
-    width: 100%;
+.top-header{
     text-align: center;
-    margin-top: 10px;
 }
 
 div.burger-menu{
@@ -85,7 +82,7 @@ div.burger-menu{
 }
 
 div.burger-menu i{
-    background-color: #0044AA;
+    background-color: rgb(23, 61, 212);
     border-radius: 5px;
     color: #FFF;
     font-size: 20px;
@@ -109,7 +106,15 @@ article div.main-article{
     font-weight: normal;
 }
 
-h3,
+h3{
+    color: #666;
+    text-align: left;
+    /*margin-left: 3.5rem;*/
+    margin-bottom: 20px;
+}
+.offers h3{
+    margin-top: 20px;
+}
 .description{
     color: #666;
     margin-left: 92px;
@@ -151,6 +156,7 @@ main section article{
 
 main section article img{
     width: 100%;
+    border-bottom: 0.5px solid #e4e2e2;
 }
 
 main section article i,
@@ -186,7 +192,7 @@ main section article i{
     float: right;
     margin-right: 20px;
     position: relative;
-    bottom: 15px;
+    bottom: 18px;
 }
 
 .nav_1y2{
@@ -212,18 +218,25 @@ footer{
     width: 100%;
     text-align: center;
     margin: 10px auto;
-
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
 footer section div{
-    padding: 40px 20px 0px 20px
+    padding: 40px 20px 0px 20px;
+    max-width: 400px;
 }
 footer section div i{
-    color: #0044AA;
+    color: rgb(23, 61, 212);
     font-size: 2em;
     margin: 0 auto;
     padding-bottom: 10px;
+    transition: all 500ms ease; 
     
+}
+footer section div i:hover{
+color: #d8ce40
 }
 .text-footer {
     color: #666;
@@ -238,31 +251,23 @@ footer section div h4{
 .rights {
     color: #666;
     text-align: left;
-    padding-bottom: 10px;
+    padding: 40px 0px 20px 20px
 }
-
-/*footer{
-    text-align: center;
-}
-
-footer i{
-    color: blue;
-    font-size: 2em;
-    margin-top: 10px;
-}
-
-footer h5{
-    margin-top: 10px;
-}*/
 
 @media (min-width: 361px){
     main article{
-        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+        box-shadow : 0px 0px 8px rgb( 100 , 100 , 100 );
     }
     .products{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
         max-width: 700px ;
         margin: auto;
-    }    
+    }
+    h3{
+        margin-left: 3.5rem;
+    }
 }
 
 @media (min-width: 769px){
@@ -273,20 +278,46 @@ footer h5{
         display: none;
     }
     .products{
-        max-width: 1500px ;
+        max-width: 1400px ;
         margin: auto;
     }
     .top-header{
-        display: flex;
-        align-items: center;
         padding: 10px;
-        max-width: 1200;
+        max-width: 1200px;
     }
-    header div.top-header .cuotas{
-        width: 33%;
+    .top-header{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;  
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
     }
+    .copy-header{
+        max-width: 250px;
+        text-align: right;
+        flex-grow: 2;
+    }
+    .copy-header, .logo_search{
+        flex-basis: 800px;
+    }
+    .logo_search{
+        flex-shrink: 3;
+    }
+
     .description{
         margin: 20px 0;
         padding-left: 12px;
+    }
+    footer section{
+        display: flex;
+        justify-content: space-around;
+    }
+    footer section div{
+        max-width: 420px;
+        line-height: 30px;
+    }
+    .rights{
+        align-self: flex-start;
     }
 }
