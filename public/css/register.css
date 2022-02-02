@@ -11,6 +11,7 @@ body .formulario{
     margin: 15px auto;
     width: 60%;
     border-radius: 20px;
+    max-width: 400px;
 }
 
 body .formulario h3{
